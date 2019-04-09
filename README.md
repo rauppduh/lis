@@ -1,0 +1,95 @@
+Classes model for:
+
+Entities 
+Interactions 
+
+Used 
+Value Objects
+Entities
+Aggregates
+
+Design patterns
+Strategy
+Factory
+Abstract factory
+
+SOLID
+Single responsibility
+Open Closed
+Dependency Inversion
+
+
+As I do not have enough knowledge of the business, I follow it on my way.
+
+I did not test the abstract factory and not even the strategy, the idea here was show how I would
+design... but even though I created unit test for some components(one factory, order service, test operation service) following TDD, in order to show how I decouple the objects and test them.
+
+As we should not extend a lot the design, I miss creating more components to be able to test many
+of the command operations (the strategies and testoperationservice are commands and not query operation, not able to test at this moment and therefore not being TDD).
+
+High level refactoring strategy
+
+Before 
+
+1. understand the system
+2. who is coupled to it? 
+3. Have a picture of the system, write it down (UML, CRC)
+4. how plug the current legacy system to the new one and start shutting down the old one?
+
+During
+1. Acceptance test (black and white box)
+2. Unit test
+3. Continuous integration
+
+After
+1. Acceptance test (black and white box)
+2. Unit Test
+3. continuous integration
+
+Refactoring Strategy
+
+Before, during and after: TDD through out the refactoring, without exception (even when the code
+is still procedural, fail pass refactor cycle, included for black box acceptance test
+
+Agile involved before, during and after (extreme programming, scrum/scrumban/kanban, what fits better), devops culture
+
+Before
+
+1. Are there well defined APIs? If the answer is yes, why not start from the APIs the refactoring?
+   1.1  Test from the API, testing the features by using BDD (close to the business analyst, to the PO or whoever has the business understanding) - already works as accepetance test
+   1.2 After ensuring the output after inputting data, we can start refactoring by following refactoring patterns, extracting variables, names, classes, start writing CRC(Class Responsibility Collaborator down to understand what classes do and know)
+
+2. the old api is not equals to the new (and is coupled to the clients)
+   2.1 be close to people that understand the system (business, po, developers, or whoevent who understands the domain), Write CRC to understand the classes (what they do and know)
+   2.2 Continue using the current input objects and convert them into new objects creating some "adapter"(not for interface, but object) or anti corruption layer(if micro services is the new player)
+   2.3 Shutdown the old system step by step, while developing the services (the well defined service contratcs)
+   2.4 Acceptance test for java apis
+
+3. Is the system entirely new?
+   3.1 be close to people that understand the system (business, po, developers, or whoevent who understands the domain), Write CRC to understand the classes (what they do and know)
+   3.2 is API Coupled to the old system and its client? Anti corruption layer to send the right object to the new system without changing the api, without deprecating it for the moment
+   3.3 Acceptance test for java apis   
+
+During
+
+The steps follow TDD principles
+
+1. Starting from acceptance test (with well defined user stories and therefore, given/when/then for all the cases) - it takes us to have good apis and become easy to be tested
+2. Unit test (fail pass refactor)
+
+After
+Refactor what brings value, not only because you just like refactoring, but what you are working on.
+
+Assumption
+
+Repository was not required at this moment, there is only its own interface (for order) to be unit tested when testing the order service
+
+It is possible to orchestrate the two "subsystem(order/testoperations)" with a facade or even using an Application Layer, if we follow DDD, in case of needing a coordenation and getting order from some specific user and carrying out the tests. 
+
+The package is broken in a manner that turns out to be easy to create microservices, if required, and a gateway (would create a regular object) could orchestrate external systems to some internal use (order and test operation).
+
+
+
+
+
+
