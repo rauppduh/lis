@@ -63,18 +63,27 @@ Agile involved before, during and after (extreme programming, scrum/scrumban/kan
 Before
 
 1. Are there well defined APIs? If the answer is yes, why not start from the APIs the refactoring?
+
    1.1  Test from the API, testing the features by using BDD (close to the business analyst, to the PO or whoever has the business understanding) - already works as accepetance test
+
    1.2 After ensuring the output after inputting data, we can start refactoring by following refactoring patterns, extracting variables, names, classes, start writing CRC(Class Responsibility Collaborator down to understand what classes do and know)
 
 2. the old api is not equals to the new (and is coupled to the clients)
+
    2.1 be close to people that understand the system (business, po, developers, or whoevent who understands the domain), Write CRC to understand the classes (what they do and know)
+
    2.2 Continue using the current input objects and convert them into new objects creating some "adapter"(not for interface, but object) or anti corruption layer(if micro services is the new player)
+
    2.3 Shutdown the old system step by step, while developing the services (the well defined service contratcs)
+
    2.4 Acceptance test for java apis
 
 3. Is the system entirely new?
+
    3.1 be close to people that understand the system (business, po, developers, or whoevent who understands the domain), Write CRC to understand the classes (what they do and know)
+
    3.2 is API Coupled to the old system and its client? Anti corruption layer to send the right object to the new system without changing the api, without deprecating it for the moment
+
    3.3 Acceptance test for java apis   
 
 During
@@ -85,7 +94,7 @@ The steps follow TDD principles
 2. Unit test (fail pass refactor)
 
 After
-Refactor what brings value, not only because you just like refactoring, but what you are working on.
+1. Refactor what brings value, not only because you just like refactoring, but what you are working on.
 
 Assumption
 
