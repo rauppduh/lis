@@ -22,7 +22,7 @@ Dependency Inversion
 
 Structure 
 
-Hexagonal architecture by domain, adding infrastructure and controller layer we have our thin layers. 
+Hexagonal architecture(uses domain and if we add infrastructure and controller layer we have our thin layers). 
 
 The system set the domain by bounded contexts and share the domain object, but bearing in mind that the objects eventually could not be the same (ex: TestType for Order can be different for TestOperation domain), and some future domain model refactoring is not discarded.
 
