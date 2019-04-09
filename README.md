@@ -85,7 +85,7 @@ Before
 
    3.2 is API Coupled to the old system and its client? Anti corruption layer to send the right object to the new system without changing the api, without deprecating it for the moment
 
-   3.3 Acceptance test for java apis   
+   3.3 Acceptance test for java apis
 
 During
 
@@ -95,7 +95,8 @@ The steps follow TDD principles
 2. Unit test (fail pass refactor)
 
 After
-1. Refactor what brings value, not only because you just like refactoring, but what you are working on.
+1. Refactor what brings value, not only because you just like refactoring, but on what you are working on.
+2. be deveops since the system conception and after
 
 Assumption
 
