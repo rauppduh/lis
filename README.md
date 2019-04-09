@@ -36,6 +36,8 @@ of the command operations (the strategies and testoperationservice are commands 
 
 High level refactoring strategy
 
+BE CLOSE TO BUSINESS ANALYSTS/POS/ARCHITECTS who understands the system
+
 Before 
 
 1. understand the system
