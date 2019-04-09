@@ -104,11 +104,11 @@ TestOperationCalculatorFactory is called only on tests, but it is part of applic
 
 FURTHER INFORMATION
 
-I did not test the abstract factory and not even the strategy, the idea here was show how I would
+I did not test the abstract factory and not even the strategy, the idea here was to show how I would
 design... but even though I created unit test for some components(one factory, order service, test operation service) following TDD, in order to show how I decouple the objects and test them.
 
 As we should not extend a lot the design, I miss creating more components to be able to test many
-of the command operations (the strategies and testoperationservice are commands and not query operation, not able to test at this moment and therefore not being TDD).
+of the command operations through acceptance test, as command operations does not return any thing, some acceptance test could verify the whole feature by accessing query methods
 
 
 
