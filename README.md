@@ -99,7 +99,7 @@ It is possible to orchestrate the two "subsystem(order/testoperations)" with a f
 
 The package is broken in a manner that turns out to be easy to create microservices, if required, and a gateway (would create a regular object) could orchestrate external systems to some internal use (order and test operation).
 
-TestOperationCalculatorFactory is called only on tests, but it is part of application/facade in order to inject into the TestOperationService the type of calculator by using a factory
+TestOperationCalculatorFactory is called only on tests, but it is part of application/facade in order to inject into the TestOperationService the type of calculator by using a factory and has been created in order to test the creation of TestOperationCalculator object
 
 
 FURTHER INFORMATION
