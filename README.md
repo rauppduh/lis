@@ -26,15 +26,6 @@ Hexagonal architecture(uses domain and if we add infrastructure and controller l
 
 The system set the domain by bounded contexts and share the domain object, but bearing in mind that the objects eventually could not be the same (ex: TestType for Order can be different for TestOperation domain), and some future domain model refactoring is not discarded.
 
-As I do not have enough knowledge of the business, I follow it on my way.
-
-I did not test the abstract factory and not even the strategy, the idea here was show how I would
-design... but even though I created unit test for some components(one factory, order service, test operation service) following TDD, in order to show how I decouple the objects and test them.
-
-As we should not extend a lot the design, I miss creating more components to be able to test many
-of the command operations (the strategies and testoperationservice are commands and not query operation, not able to test at this moment and therefore not being TDD).
-
-
 High level refactoring strategy
 
 BE CLOSE TO BUSINESS ANALYSTS/POS/ARCHITECTS who understands the system
@@ -111,6 +102,13 @@ The package is broken in a manner that turns out to be easy to create microservi
 TestOperationCalculatorFactory is called only on tests, but it is part of application/facade in order to inject into the TestOperationService the type of calculator by using a factory
 
 
+FURTHER INFORMATION
+
+I did not test the abstract factory and not even the strategy, the idea here was show how I would
+design... but even though I created unit test for some components(one factory, order service, test operation service) following TDD, in order to show how I decouple the objects and test them.
+
+As we should not extend a lot the design, I miss creating more components to be able to test many
+of the command operations (the strategies and testoperationservice are commands and not query operation, not able to test at this moment and therefore not being TDD).
 
 
 
