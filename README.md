@@ -8,8 +8,10 @@ Entities,
 Aggregates
 
 Design patterns
-Strategy - because the test types can add new behavior to the Operations (during the calculator execution) through a family of algorithms
+Strategy - because the test types can add new behavior to the Calculator Operation, it works as a family of algorithms
+
 Factory Method - to decide what object will perform the operation (it is a creational)
+
 Abstract factory - because there are many different operations with test type, a huge family of objects tend to be created (microbiology can have different behavior for operation1, operation2, operation3...), it is responsible for getting the right strategy behavior
 
 SOLID
