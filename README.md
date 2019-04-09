@@ -19,6 +19,11 @@ Open Closed
 Dependency Inversion
 
 
+Structure 
+Hexagonal architecture
+Separated by domain, trying to be the most decoupled possible
+
+
 As I do not have enough knowledge of the business, I follow it on my way.
 
 I did not test the abstract factory and not even the strategy, the idea here was show how I would
