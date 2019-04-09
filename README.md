@@ -1,11 +1,10 @@
 Classes model for:
 
-Entities 
-Interactions 
+Entities, Interactions 
 
 Used 
-Value Objects
-Entities
+Value Objects,
+Entities,
 Aggregates
 
 Design patterns
@@ -14,14 +13,16 @@ Factory Method - to decide what object will perform the operation (it is a creat
 Abstract factory - because there are many different operations with test type, a huge family of objects tend to be created (microbiology can have different behavior for operation1, operation2, operation3...), it is responsible for getting the right strategy behavior
 
 SOLID
-Single responsibility
-Open Closed
+Single responsibility,
+Open Closed,
 Dependency Inversion
 
 
 Structure 
-Hexagonal architecture
-Separated by domain, trying to be the most decoupled possible
+
+Hexagonal architecture.
+
+Separated by domain, trying to be the most decoupled possible.
 
 
 As I do not have enough knowledge of the business, I follow it on my way.
