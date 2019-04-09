@@ -38,6 +38,8 @@ High level refactoring strategy
 
 BE CLOSE TO BUSINESS ANALYSTS/POS/ARCHITECTS who understands the system
 
+Agile involved before, during and after (extreme programming, scrum/scrumban/kanban, what fits better), devops culture
+
 Before 
 
 1. understand the system
@@ -59,8 +61,6 @@ Refactoring Strategy
 
 Before, during and after: TDD through out the refactoring, without exception (even when the code
 is still procedural, fail pass refactor cycle, included for black box acceptance test
-
-Agile involved before, during and after (extreme programming, scrum/scrumban/kanban, what fits better), devops culture
 
 Before
 
