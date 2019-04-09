@@ -9,9 +9,9 @@ Entities
 Aggregates
 
 Design patterns
-Strategy
-Factory
-Abstract factory
+Strategy - because the test types can add new behavior to the Operations (during the calculator execution) through a family of algorithms
+Factory Method - to decide what object will perform the operation (it is a creational)
+Abstract factory - because there are many different operations with test type, a huge family of objects tend to be created (microbiology can have different behavior for operation1, operation2, operation3...), it is responsible for getting the right strategy behavior
 
 SOLID
 Single responsibility
@@ -26,6 +26,7 @@ design... but even though I created unit test for some components(one factory, o
 
 As we should not extend a lot the design, I miss creating more components to be able to test many
 of the command operations (the strategies and testoperationservice are commands and not query operation, not able to test at this moment and therefore not being TDD).
+
 
 High level refactoring strategy
 
@@ -87,6 +88,8 @@ Repository was not required at this moment, there is only its own interface (for
 It is possible to orchestrate the two "subsystem(order/testoperations)" with a facade or even using an Application Layer, if we follow DDD, in case of needing a coordenation and getting order from some specific user and carrying out the tests. 
 
 The package is broken in a manner that turns out to be easy to create microservices, if required, and a gateway (would create a regular object) could orchestrate external systems to some internal use (order and test operation).
+
+TestOperationCalculatorFactory is called only on tests, but it is part of application/facade in order to inject into the TestOperationService the type of calculator by using a factory
 
 
 
