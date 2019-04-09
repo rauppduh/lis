@@ -20,10 +20,9 @@ Dependency Inversion
 
 Structure 
 
-Hexagonal architecture.
+Hexagonal architecture by domain, adding infrastructure and controller layer we have our thin layers. 
 
-Separated by domain, trying to be the most decoupled possible.
-
+The system set the domain by bounded contexts and share the domain object, but bearing in mind that the objects eventually could not be the same (ex: TestType for Order can be different for TestOperation domain), and some future domain model refactoring is not discarded.
 
 As I do not have enough knowledge of the business, I follow it on my way.
 
