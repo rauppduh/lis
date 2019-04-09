@@ -21,7 +21,7 @@ public class TestOperationCalculatorOneTest {
 	public void executeTestOperationOneCalculator() {
 		final TestOperationCalculator testOperationCalculatorOne = new TestOperationCalculatorOne(abstractFactory);
 		final TestTypeOperationStrategy testTypeOperationStrategy = Mockito
-				.spy(new MicrobiologyOperationOneStrategyImpl());
+				.mock(MicrobiologyOperationOneStrategyImpl.class);
 		Mockito.when(abstractFactory.getTestOperationFactory("abc")).thenReturn(testTypeOperationStrategy);
 		testOperationCalculatorOne.calculate(new TestType());
 		Mockito.verify(testTypeOperationStrategy).execute();

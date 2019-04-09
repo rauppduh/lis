@@ -13,18 +13,18 @@ import com.roche.lis.domainobject.TestType;
 
 @RunWith(MockitoJUnitRunner.class)
 public class TestOperationCalculatorTwoTest {
-	
+
 	@Mock
 	private AbstractFactory abstractFactory;
-	
+
 	@Test
 	public void executeTestOperationTwoCalculator() {
 		final TestOperationCalculator testOperationCalculatorOne = new TestOperationCalculatorTwo(abstractFactory);
 		final TestTypeOperationStrategy testTypeOperationStrategy = Mockito
-				.spy(new ImmunologyOperationTwoStrategyImpl());
+				.mock(ImmunologyOperationTwoStrategyImpl.class);
 		Mockito.when(abstractFactory.getTestOperationFactory("cba")).thenReturn(testTypeOperationStrategy);
 		testOperationCalculatorOne.calculate(new TestType());
 		Mockito.verify(testTypeOperationStrategy).execute();
 	}
-	
+
 }
